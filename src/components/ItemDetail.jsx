@@ -11,7 +11,7 @@ const ItemDetail = ({item}) => {
                 <h1>{item.nombre}</h1>
                 <p>{item.descripcion}</p>
                 <p><b>${item.precio}</b></p>
-                <ItemCount stock={item.stock} />
+                <ItemCount stockItem={item.stock} />
             </div>
         </div>
     )

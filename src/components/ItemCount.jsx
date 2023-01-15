@@ -1,9 +1,14 @@
 import React from "react";
+import { useEffect } from "react";
 import {useState} from "react";
 
 const ItemCount = ({stockItem}) => {
     const [counter, setCounter] = useState(1);
     const [stock, setStock] = useState(stockItem);
+
+    useEffect(() => {
+        setStock(stockItem)
+    }, [stockItem])
 
     const decrementarStock = () => {
         if (counter > 1) {
